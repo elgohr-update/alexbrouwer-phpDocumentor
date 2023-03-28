@@ -552,7 +552,7 @@ jobs:
           output: ./build/index.html
 
       - name: Build
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           VERSION: '3.0'
         with:
@@ -573,7 +573,7 @@ jobs:
           tag: ${{ steps.demo_build.outputs.tag }}
 
       - name: Build
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           VERSION: 'latest'
         with:

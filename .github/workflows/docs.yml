@@ -33,7 +33,7 @@ jobs:
           ./bin/phpdoc --setting="guides.enabled=true" --force -v
 
       - name: Build Container
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           VERSION: '3.0'
         with:
@@ -54,7 +54,7 @@ jobs:
           tag: ${{ steps.docs_build.outputs.tag }}
 
       - name: Build Container
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           VERSION: 'latest'
         with:
